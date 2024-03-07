@@ -27,7 +27,8 @@ getData();
 
 function send()
 {
-      msg = document.getElementById("msg").ariaValueMax;
+      msg = document.getElementById("msg").value;
+      console.log(msg);
       firebase.database().ref(room_name).push({
             name:user_name,
             message:msg,
